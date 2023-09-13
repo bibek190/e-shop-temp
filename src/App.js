@@ -4,6 +4,7 @@ import { Header, Footer } from "./components/index";
 // pages
 import { Home, Contact } from "./pages/index";
 import { Login, Register, Reset } from "./pages/index";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/reset" element={<Reset />} />
         </Routes>
         <Footer />
+        <ToastContainer />
       </BrowserRouter>
     </div>
   );

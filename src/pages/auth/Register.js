@@ -4,12 +4,13 @@ import registerImg from "../../assets/register.jpeg";
 import Card from "../../components/card/Card";
 import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 
 import Loader from "../../components/loader/Loader";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/config";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -38,12 +39,10 @@ const Register = () => {
       .catch((error) => {
         toast.error(error.message);
       });
-    console.log("form");
   };
 
   return (
     <>
-      <ToastContainer />
       {isLoading && <Loader />}
       <div>
         <section className={`container ${styles.auth}`}>

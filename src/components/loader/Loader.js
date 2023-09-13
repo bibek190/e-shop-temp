@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 const Loader = () => {
   return ReactDOM.createPortal(
     <div>
-      <div class={styles["lds-facebook"]}>
+      <div className={styles["lds-facebook"]}>
         <div></div>
         <div></div>
         <div></div>
